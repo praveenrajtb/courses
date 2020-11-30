@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{post.title}}
+{% endblock %}
+
+{% block content %}
+
+      <div class="container">
+        <div class="row justify-content-md-center pt-5">
+          <div class="col-7"><h1>{{course.title}}</h1></div>
+<!--            <img src={{course.title}} alt="Avatar" class="avatar">-->
+
+          <div class="col-7">
+              <img src={{course.image.url}} alt="Paris" class="center">
+          </div>
+             <div class="col-7"><p>{{course.content|safe}}</p></div>
+        </div>
+      </div>
+      <script>
+      $('#myForm').trigger("reset");
+      </script>
+
+{% endblock %}
